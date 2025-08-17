@@ -1,16 +1,16 @@
-//
-//  PageView.swift
-//  Landmarks
-//
-//  Created by Matt Gilbert on 8/17/25.
-//
+/*
+See the LICENSE.txt file for this sample’s licensing information.
+
+Abstract:
+A view for bridging a UIPageViewController.
+*/
 
 import SwiftUI
 
 struct PageView<Page: View>: View {
     var pages: [Page]
     @State private var currentPage = 0
-    
+
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             PageViewController(pages: pages, currentPage: $currentPage)

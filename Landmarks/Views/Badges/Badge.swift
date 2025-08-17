@@ -1,9 +1,9 @@
-//
-//  Badge.swift
-//  Landmarks
-//
-//  Created by Matt Gilbert on 8/14/25.
-//
+/*
+See the LICENSE.txt file for this sample’s licensing information.
+
+Abstract:
+A view that displays a badge.
+*/
 
 import SwiftUI
 
@@ -16,15 +16,15 @@ struct Badge: View {
         }
         .opacity(0.5)
     }
-    
+
     var body: some View {
         ZStack {
             BadgeBackground()
-            
+
             GeometryReader { geometry in
                 badgeSymbols
-                    .scaleEffect(1.0 / 3.5, anchor: .top)
-                    .position(x: geometry.size.width / 2.0, y: (2.5 / 3.5) * geometry.size.height)
+                    .scaleEffect(1.0 / 4.0, anchor: .top)
+                    .position(x: geometry.size.width / 2.0, y: (3.0 / 4.0) * geometry.size.height)
             }
         }
         .scaledToFit()

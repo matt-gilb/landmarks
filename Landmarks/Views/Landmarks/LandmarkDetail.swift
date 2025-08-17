@@ -1,38 +1,38 @@
-//
-//  LandmarkDetail.swift
-//  Landmarks
-//
-//  Created by Matt Gilbert on 8/10/25.
-//
+/*
+See the LICENSE.txt file for this sample’s licensing information.
+
+Abstract:
+A view showing the details for a landmark.
+*/
 
 import SwiftUI
 
 struct LandmarkDetail: View {
     @Environment(ModelData.self) var modelData
-    
-    var LandmarkIndex: Int {
-        modelData.landmarks.firstIndex(where: { $0.id == landmark.id})!
-    }
-    
     var landmark: Landmark
-    
+
+    var landmarkIndex: Int {
+        modelData.landmarks.firstIndex(where: { $0.id == landmark.id })!
+    }
+
     var body: some View {
         @Bindable var modelData = modelData
-        
+
         ScrollView {
-            mapView(coordinate: landmark.locationCoordinate)
+            MapView(coordinate: landmark.locationCoordinate)
                 .frame(height: 300)
-            
+
             CircleImage(image: landmark.image)
                 .offset(y: -130)
                 .padding(.bottom, -130)
-            
+
             VStack(alignment: .leading) {
                 HStack {
                     Text(landmark.name)
                         .font(.title)
-                    FavoriteButton(isSet: $modelData.landmarks[LandmarkIndex].isFavorite)
+                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
                 }
+
                 HStack {
                     Text(landmark.park)
                     Spacer()
@@ -40,13 +40,12 @@ struct LandmarkDetail: View {
                 }
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
-                
+
                 Divider()
-                
+
                 Text("About \(landmark.name)")
                     .font(.title2)
                 Text(landmark.description)
-                    .font(.subheadline)
             }
             .padding()
         }
@@ -56,5 +55,7 @@ struct LandmarkDetail: View {
 }
 
 #Preview {
-    LandmarkDetail(landmark: ModelData().landmarks[0])
+    let modelData = ModelData()
+    return LandmarkDetail(landmark: modelData.landmarks[0])
+        .environment(modelData)
 }
