@@ -1,9 +1,10 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
+//
+//  HexagonParameters.swift
+//  Landmarks
+//
+//  Created by Matt Gilbert on 8/16/25.
+//
 
-Abstract:
-Size, position, and other information used to draw a badge.
-*/
 
 import CoreGraphics
 

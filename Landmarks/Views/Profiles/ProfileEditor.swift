@@ -1,9 +1,9 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-An editable profile view.
-*/
+//
+//  ProfileEditor.swift
+//  Landmarks
+//
+//  Created by Matt Gilbert on 8/16/25.
+//
 
 import SwiftUI
 

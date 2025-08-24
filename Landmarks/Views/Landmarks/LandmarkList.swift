@@ -1,9 +1,9 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A view showing a list of landmarks.
-*/
+//
+//  LandmarkList.swift
+//  Landmarks
+//
+//  Created by Matt Gilbert on 8/16/25.
+//
 
 import SwiftUI
 

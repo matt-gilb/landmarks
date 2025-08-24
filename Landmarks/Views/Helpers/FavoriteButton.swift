@@ -1,9 +1,9 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A button that acts as a favorites indicator.
-*/
+//
+//  FavoriteButton.swift
+//  Landmarks
+//
+//  Created by Matt Gilbert on 8/16/25.
+//
 
 import SwiftUI
 
